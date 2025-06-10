@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Редагувати оцінку</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+<h1>Редагувати оцінку</h1>
+<form action="/updateGrade" method="post">
+    <input type="hidden" name="id" th:value="${grade.id}">
+    <input type="text" name="subject" th:value="${grade.subject}" required>
+    <input type="number" name="score" th:value="${grade.score}" min="1" max="100" required>
+    <input type="date" name="submissionDate" th:value="${grade.submissionDate}" required>
+    <button type="submit">Зберегти</button>
+</form>
+</body>
+</html>

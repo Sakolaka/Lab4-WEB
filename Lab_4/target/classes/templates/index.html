@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Облік успішності студентів</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+<!-- Головна сторінка: заголовок, логотип, інформація -->
+<header>
+    <h1>Сайт обліку успішності студентів</h1>
+    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAMAAzAMBIgACEQEDEQH/xAAcAAEAAgIDAQAAAAAAAAAAAAAABgcEBQEDCAL/xABQEAABAwICBQYJBwgJAgcAAAABAAIDBAUGEQcSITFBE1FhcZHRFBYXIjJVgZOxI0JTcqHB4RVSVGKCosLSJDM2Q3SSsvDxlLMlJjRFY3N1/8QAGAEBAAMBAAAAAAAAAAAAAAAAAAECAwT/xAAjEQEAAgICAgMAAwEAAAAAAAAAAQIDERITISIxQVEyQ2EU/9oADAMBAAIRAxEAPwC8UREBERAREQEXBUSxTjSC1l9LQatRWDY7b5kfXznoUxEz4hW1orG5SOvuFLboXTVs7ImDdrHf1c6hl20hsZrMtVMZD9JNsHYoJcK+quM5qK6d8r/znHYOocAs+zYaul3IdTwFkLt80vmty+JXRGKtY3ZzzmtadVh9V2Jr1W58tXyta75sJ1AOzatS5xc4ve4ued7nHM9qsa3aO6OPJ9yqpah3FkZ1G9u/4KQUuGbJSgCK2U5I4yN1z2uzKntpHxB1ZJ+ZUsZGje5vaudZrtxB9qvdlDSRjVjpYGjmbGAuua126cZTUNLIOZ8TT9yjvj8P+ef1SdPU1FK4PpqiaF3PFIW/Bb+3Y3vVIcpZWVUY3tlaAe0fipvWYKsNSDq0Qgd+dTvLMvZu+xRq6aO6iIF9rqhMR/dzDVPaN/2KeeO3zBNMlfiW+s+OLbXlsdSTSSndynok9BUoa4OAIcCDxCoivoqqgm5Gtp5IZM88njLPq/BbXD+KbhZXBrXctS5+dBI7YOlp4KlsO/NU1za8WXGi1llvVJeqUT0cuf58Z2OYeYhbNYOiJ25RERIiIgIiICIiAiIgLg5bkzA3qKY+xGbPRCmo3tFbOPNPGNvF3cpiNzpFrRWNy1mOMXmB0lrtUnyu6aZvzP1R09Kr+nimqp2QwRvkmkOxrRmSV1wxS1M7IadjpZpHZMY3aXlW/hHDENjpRJKGyVzx8pJv1f1W9A+1dMzGKP8AXLEWyzv6azDGBYKIMqbvq1M5yIiHoR/zH7FNmtDWgNAAG4AINi5zXNa02ncumtYrGoERFCwiIgIiIMO5W+kuVO6nrYGTRuG5w3dR4KssU4OqrTrVNA59RR8cxm+Pr5x09qthfLgHAtcM2nYQr0vNVL0i3yom2XOqtlY2qopdR7d4G5w5j0K4MN32nv1A2eE6krPNmhO9jvvHMVBsdYT8Bc+522P+iuPy0TR/VHnH6vwUasV2nstyiq6fMgbJGZ7Ht4g/73ra0RkjcOetpxzqV7osS210FxooaumeHRStzaRw6D0rLXM6xERAREQEREBERBj11VFRUk1VO7UihYXvdzAKibxc5rtcZq6p2Pkdsbn6LeA9isLStdORt1PbY3ZGpfryZHbqNOYHtOXYq8s1sqrzXtpKMNMhaXeccgAOldGKuo5S5s1tzxhkWG9PsNU6ripYZ5S3VaZCfN6lu5NKlzZ/7fSH9py4fo9vrh5opfe/gsSXRriF24Unvj3KbzSUUi9YdzdLF3fK2OK2Uhc4gDz3KysN3qO925tQ0BsrfNljHzHd3EKnqvC1ww3K2W5MYDKC2N0btZo59vOs/Dd6ksl0ZUMJMLvNmYPnN7xvHt51E44mu4T2zFtSulF1U1RFVQRzwPD45GhzXDiF8V1ZBQ0ktTUv1Io26ziud0bZAKKqqjHl4fUSPpzDHEXHUYY8y1vDMrrGO76f72D3X4rWMFpZTnpErZRVN49336WD3X4p49376WD3X4qei6O+i2UVTePd++lg91+K7afSBeWPzmbTSs4jky09uaicF099FoSxtmY6ORocxwyc0jYQqWxhYzYrs+BoPgso14Hfq8W+z7xzqycO4vory4U7x4NV/RPOx31TxTHVnF3sEuo3Oop/loiN+YG0e0Zj/hRSZpbUpvEXruET0Y3w09e601DvkqjN8GfB43j2j7R0q0F54p6iSmmjqISWyRvD2HmI2q/LTWsuNupqyLLUnjD9nUpzV1O0YbbjTMREWTYREQEREBcFcr5edVpPMgpXSHXeGYpqgTkynAiHNs2n4qTaJLcOSrLk8HWcREw9A2lV5c5jUXCrmcc9ed7vtKuTR1TiDCVERvl1pHdZJ7lvfxTTnp5vtJAuURYOhr73aoLxb5aOpGx+1ruLHDcQqVudFNbK+WjqW5SxnLd6Q4EK+lEsfYd/K9B4TSM/p1OM2gb5W8W9fEdnFa4r8Z1LHLj5RuEe0eYk8FqPyTWP+Qld8g9x9B35vUeHSsfHuIxcawW6kfnTQO85wOyR/cPioWDlnnmCD2EFca2/aTmt+uOXJh2W48WxtdHPdK+GjphnJIdnQOJKsFmjeiLRrV9Vn0BvcsrAGHDarf4VWR6tbUjMh2+NvBvXz9nBS4DJY5MszPhtjxREeUI8m1B+n1XY3uTyb0PrCr7G9ynC4VOy36066/iD+Tag9Y1fY3uWDc9HcsMTpLbWmZzRsimaAT1OHcrGRIyWROKk/SgJGzUs7mSNfHNE/I7cixw+CtvBF8N8tJFQQaqnPJzfrczvb8QVDtKlHFTXqlqYxquqoncplxLchn15ED2LjRVUObf6iFp8ySmJPWHDI/ae1bX1enJjT0vxRrE9ALZf62jbsayUuYDxado+KsbRVXGosUlK45uppiB9U7QoxpXpxDiGCZoy5anBcecgkfDJZOiGcsutfT558pC1/wDlOX8Srb2xrV9ci1ERFg6BERAREQF11H9RJ9U/Bdi+JhrRPHO0hB5sY4loJ35K/sHgNwvbAN3g7PgqCkjMUkkR3xuLT1g5fcr4wPMKjCVskH0Ab2bPuW+X4hhi+Zb1EXCwbuVqsRXinsVslrqnbq+bGwb5HncP98M1sZZWxMe+RwaxozJO4BUdjjEjsQ3QuicfAqfNsDefnd7fgrUrylS9tQ1FZVOq6qWolDQ+V5eQ3YATzLmhq3UVbBVMYx7oZA8NeM2nI8VkYas8+ILvFRU4IZ6U0g/u2cT18AvvFVkmw9d30r9Z0DvPp5cvTb3jiuncfxcup1yXhZLpTXi3Q11I7NkjdrTvY4b2npBWfmvPdpxDdLO2RltrHwskILmgAjMDLPaFsPHvEnrN3u2dyx6p+m8ZY15Xpmmaovx7xJ6zd7tncnj3iT1m73bO5Omye2q9F8PkbG1zpHBrWjMuJyAHSqO8e8Ses3e7Z3LAuWI7xdWcncLjLLFnnyexrT1gAZ+1Iw2JzR9Ntjy+xX2+a9I8OpKdvJRP4P27XdXxyC3uiKje+srrgRlHHGIGngXE6xHsAb/mULsNkrr9WtpaJhcBtkmPoRjnJ+5XlYbTBZbXBQ03oxja7La93Fx61bJPGvGFMcTa3KUC0x5CqtbstpZKPtatboncfGt44Gjk/wBTFmaYpta6W6D8yBzz+07L+FYuiGMyYlnl4R0jgf2nN7in9Z/YuBERYOgREQEREBcFcrhyDz3iul8AxHcqfIlrZ3OB59Y633qztE9d4Rht1OSNammc32HaFF9L1t5C801e1vm1Meo48NZv4FY+iq7ChxA6hkdlFWsyBJ/vBtHaM+wLafajCvi651wTkUCjOPMTx4btLpGFrq2YFlNGef8AOPQFlENpnSLaVcU5A2Gik37ax7Tw4M7+jZxKrOIOmkjjiaXSPcGtaN5cTsA9uQXTLPJPK+aZ5fK86znk7SedSTAl1stkuLrjeWzyTRDKmZGwODCd7jt35bB1noy3j1hhPtPlbWCMOMw9aWseAaybJ9Q8b8/zeoLMxFh6hxDSNp65rgGO1mPjIDmnoKjXlWw99FW+5HeufKth76Kt9yO9Y6tvbbddac+S2yfpNf7xv8qeS2yfpNf7xv8AKvnyq4f+irfdDvTyrYf+irvdDvU+6uqPryW2P9Jr/eN/lTyW2P8ASq/3jf5V8+VbD/0Vd7od6eVbD/0Vd7od6e6dUffktsf6TX+8b/Ku+l0aYehcDK2qqMj6Ms2Q/dAWL5VrBwhrvdDvTyr2D6Cu90O9Pc9E1oaGlt9O2noaeKCFu5kbQB/z0rvyUD8q9g+grvdDvXy7SvY9R2pBW62R1c4hv7VHGU8oQ3SXXCrxZUsYc2wNbEOjIZn7SVJdDNJlHcq05+c5kIPVmf4lWdXUvrKmaqmz15Xl7tvEnNXno9tptmFqKOQZSygzPGXF234LS/iumVPN5lJURFi3EREBERARFwUEex5ZXXzDlRDAzWqohysHS5vzfaMx7VQsE8sEsc8LzHLE8PY9u9pBzB9hC9NEblSuk/DbrPdHXGmjPgNY4l2Q2RycR0Z7+vNaY7fTLJH3C0MNX6K92CO4xtJkDSJooxmWyDe0fd1hVPiizYwxFd5rjUWWqDT5kMWs0iNnAb/aTzrGwNik4buYdK5zqCfIVDebmeFfFNPFUQRzQSNkikaHMew5hwO4gqJiaymPaHnrxKxP6jqe1veniTif1HU9re9eikTsk64edfErE/qOp7W96eJWJ/UdT2t716KROyU8IedfErE/qOp/d708SsT+o6n93vXopFPZJwh518ScT+o6n93vTxJxP6jqf3e9eikTsk4Q86+JOJ/UdT+73p4k4n9R1P7vevRSJ2ScIedfEnE/qOp/d71rqq31Vsq3U1wgdDO3LNhIJbmMxnl0EK+sZ4lp8NWx07i11VJm2nhz9N3OegcSqDqaqWrqJaioc6WaZxe928klWrMyzvER8Nxg60PvmIqWjAJhB5Wb9WNu/PrJAHSV6CY0MAaAABuA4KIaNsNmw2jl6lmVbWZPl52N+a37c1MlS87lpSNQIiKi4iIgIiICIiAsK722mu9vmoa2PXhmbkeBHMQeBCzUQecsUYfrMN3V1JVjXjJ1oZtXZK3n6+cLdYCxvJh9zaKt1pbWXbMtroCd5HRzj2q38Q2Oiv8Ab30dfEHtO1jxsdG7g5p4FUVizCtfhmrLappkpnu+Sqm+i7oPMehaxblGpYzXjO4egaKrp62lZUUkzJYXjNr2HMFd+YyzXm/DeJ7nhuoMlvmyjcRylPJtjk9nA9I29atvDekezXbUhrHCgqzs5OV3muPQ7vVJrppFtpsi+GSMkaHxvD2nc5pzBX1mqrOUXGaZoOVxntyTNYdzulDa4DPcKqKCMcZHZZ9XOgzMxzqP4txXQYbpyZ3iSqc3OKnafOd0nmHSoTifSpmx1PhyM6xGXhczd31W/eewqs56ieqqHT1E0k08js3Pe4lzjwV4p+qTf8Zt6u9Xe7jJX179aR2xrdzWNG5oHAD8d6nWjHBxqZmXu6Q5QtyNLE4bXkfPI5uZfOA9Hb6nkrjiGJzIBk6KkfsL+Yv5h0ceKtprA1oaGgAbgOCm1oiNQrWu53L6AyK+kRZtRERAREQEREBERAREQF01dLBWQPgqoY5oXjJzJG5gjqXciCp8UaKnBz6jDco1TmfA5nbvqO+49qra5UFbbJjBcaSSmk3ZSMyz6uB9i9QZLHrKGlroTDWwRzxn5sjQQrxeYUmn483W6/XW1EOt9fUwc7Gv2H2HZ9iktJpUxLTtAlNFVDnmgIPa0gfYp5ddFmHazWdStnoXnbnA/wA0fsuzAHUozV6HaoOJor3C9vBk1OQf8wcfgrbrKNWh1t0wXIAa9no3HnEzm/cV1zaXru4fIWyhjPO9z5O5YsuiTEodlFU2h7ed1RK09nJldtPoivzsvCq62xc/Jvkfs9rWqPVGrNVX6RsUVzCDXMp28RSxhn2nM/ao1U1c1U8y1c8ksm8PkeXHP2q0qDQ5CMjcb1LLtzypoRGOrzi5S+z4Fw9aHNkp6Bkkrd0s5MjvtU8qwcZlTFgwje788eB0hjhO+ecFjB959itrCOj622Atqpz4bX/TSNyaz6reHXvUwawNaA0AAbgBuX0FSbTK8ViHGRRcoqrCIiAiIgIiICIiAiIgLhcrg70GtbiGyvmEDLvb3TF2qIxVM1i7PLLLPetkDmM15wqWk1lRqh2yV583ePOKuXR/iM3y0iKpdnXUoDJc97x81/t49KDfV93ttue1lwuFJSueM2iedrC4dGZWTDNHPEyWF7JI3jNr2OzDhzg8VVmmPbc7Zv8A/Tyf6grAwkP/AC1bP8O34IO6S+2eOq8ElutA2p1gzkTUsD9Y7hq5559CzzuVG3vbpCmz2/8AicX+pivMhBr6m92mkqTTVV0ooZ25ZxyVDGuGfQTms/Mb8wRlnnmqQ0jAeO1w2cYv+21XZEPkWfUHwQa44lsTXOa69W1rmnIg1ceY+1dtNfLTVycnSXWhnkO5kVQxxPsBVIWq2tvGJm0EkjomzVEjS9ozI2uP3LeYxwGLDbPDoKx1TEHBkgkYAW6xyBGW/bsyQXHmsSvulBbtX8oV1LSh/o8vM1mt1ZlQ7RRd6mut9VR1MjpfBXN5N73EnVI3ZnmWDpkz1LZt+c/4IJr4zWD15bP+rj71lUN0oLjr/k+tpqrUy1+Qma/Vz3Z5E5biqqwzgEX2yU9x/KHI8qXjk+TBy1XFv3KdYMwoMMeGf0rwg1Op8zLLV1v5lIk6IigEREBERAREQEREBccVyuOKCjsHRsmxtHFK0PjkkmY9h3EEFZNZDVYCxe2SDWNK7NzP/kiJ2t6x3c66cEf27p//AL5f4lZ+MsPsxBaHwjIVMXn07uZ2W7qKCBaVquGuqLPVUz9aGale5hHEawVjYS/szbP8O34KhqiSpEbKSpLgKVz2sjcNrCT5w7Qr5wl/Zm2f4dvwUyKivmzSFN/+lF/qYrzKpLSBRT2zF89S0ECVzaiJ2XEZduRCn9JpDsE1CKioqXQS6ub4HRuLmniBlv6wkivtI39trh1xf9tquyL+oZ9QfBUZNJNi7GZlhhcG1dQ0hp3tiaANvN5rdu/aVegGqzV4AZBQPP8Ab7k6z4iNwjibM6CeRwjc7VDtpG/2rc3zFdyxfyFrZBT00Ukg80SbHO4aziBs9m9Y+D2tdjqmDmhw8Kk2H9pSbSjhpkcLb1RQhuqdWpaxvA7n5dew+xSJRgrDgw7bHRyPElTM7Xle0bM9wAUY0x+hbPrP+5bXRriN10oDb6x+dXSgapJzMkfA9Y3LVaY/Qtn1n/AJAjlhxLia22uKktVMX0jC4sd4I5+ebiTtG/aSrGwFdbrdrbVTXmMxzMqSxgMJjzZqNO479pO1aDAuLrJasLUdFX1piqI3SlzeTccs5HEbQOYhTCzYktV7lkitlVyzo26zhqObkM8uIQbdERQCIiAiIgIiICIiAuDwXKIIpasDWy13Zlxp5akztc5wDnAtzPs6VKguUQRO94EtV4ucldM6eKWQDXELgAT+celSK3UjLfQwUcJJZAwMaXb8gspEGsvVkoL5TeD3GASAbWu3OaegqJu0WWwyFwuNcGE+j5nZ6Kn6INJh3DFrsDHeAwHlXbHSyHWeR19y3Lty+kQRO2YEtluu8dyhmqTMx7pAHOGrmc+jpUmqYI6mnkgnYHxSNLHtdtBBGRC7kQRC04Bt1proa2jq6xssRzGbxkRxB2bQtliXDFHiMQCtfM0Q5lvJOA3reogg3kvsv6RW/wCdvctvhrCVBhyeaajkne6VgYeVcCMs89mxSJEBERAREQEREH//2Q==" alt="Логотип" style="width:100px;"> <!-- Додайте логотип -->
+    <p>Цей сайт призначений для ведення обліку оцінок студентів з навчальних дисциплін.</p>
+    <p>Автор: Ст. гр. САУм-24-1 Лобанов Кирило , Дата створення: 2025-10-06</p>
+</header>
+
+<h2>Додати оцінку студента</h2>
+<form action="/" method="post" name="studentForm" onsubmit="return validateForm()">
+    <input type="text" name="studentName" placeholder="Ім'я студента" required>
+    <input type="text" name="patronymic" placeholder="По батькові" required>
+    <input type="text" name="subject" placeholder="Предмет" required>
+    <input type="number" name="score" placeholder="Оцінка" min="1" max="100" required>
+    <input type="date" name="submissionDate" required>
+    <button type="submit">Додати</button>
+</form>
+
+<h2>Список студентів та їх оцінки</h2>
+<div th:if="${!hasStudents}">
+    <p>Немає записів у базі даних.</p>
+</div>
+<ul th:if="${hasStudents}">
+    <li th:each="student : ${students}">
+        <strong th:text="${student.name + ' ' + student.patronymic}">Ім'я та по батькові</strong>
+        <ul>
+            <li th:each="grade : ${student.grades}">
+                <span th:text="${grade.subject}">Предмет</span>:
+                <span th:text="${grade.score}">Оцінка</span>
+                (дата здачі: <span th:text="${grade.submissionDate}">Дата</span>)
+                <a th:href="@{/editGrade/{id}(id=${grade.id})}">Редагувати</a>
+                <form action="/deleteGrade" method="post" style="display:inline;">
+                    <input type="hidden" name="gradeId" th:value="${grade.id}">
+                    <button type="submit">Видалити</button>
+                </form>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<script>
+    function validateForm() {
+        var studentName = document.forms["studentForm"]["studentName"].value;
+        var patronymic = document.forms["studentForm"]["patronymic"].value;
+        var subject = document.forms["studentForm"]["subject"].value;
+        var score = document.forms["studentForm"]["score"].value;
+        var submissionDate = document.forms["studentForm"]["submissionDate"].value;
+
+        if (studentName === "" || patronymic === "" || subject === "" || score === "" || submissionDate === "") {
+            alert("Всі поля обов'язкові для заповнення");
+            return false;
+        }
+        if (score < 1 || score > 100) {
+            alert("Оцінка має бути від 1 до 100");
+            return false;
+        }
+        return true;
+    }
+</script>
+</body>
+</html>
